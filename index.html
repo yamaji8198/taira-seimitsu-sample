@@ -55,25 +55,15 @@
       text-decoration: none;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
-
     .site-header {
       min-height: 76px;
       padding: 0 clamp(22px, 5vw, 78px);
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 28px;
-
       background: #0d1012;
-
       border-bottom: 1px solid #262c30;
-
       position: relative;
       z-index: 20;
     }
@@ -82,9 +72,7 @@
       font-family: "Noto Serif JP", serif;
       font-size: 23px;
       font-weight: 700;
-
       letter-spacing: .14em;
-
       white-space: nowrap;
     }
 
@@ -92,7 +80,6 @@
       display: flex;
       align-items: center;
       gap: 30px;
-
       font-size: 14px;
       font-weight: 700;
     }
@@ -107,36 +94,38 @@
 
     .instagram-link {
       color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
+    .instagram-link svg {
+      width: 23px;
+      height: 23px;
+      fill: currentColor;
+      display: block;
+    }
 
     .hero {
       height: min(720px, calc(100vh - 76px));
       min-height: 560px;
-
       position: relative;
-
       overflow: hidden;
     }
 
     .hero > img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
       object-position: center;
-
       display: block;
     }
 
     .hero-shade {
       position: absolute;
       inset: 0;
-
       background:
         linear-gradient(
           90deg,
@@ -148,67 +137,48 @@
 
     .hero-copy {
       position: absolute;
-
       left: clamp(28px, 7vw, 135px);
       top: 50%;
-
       transform: translateY(-50%);
-
       max-width: 720px;
     }
 
     .eyebrow,
     .section-kicker {
       margin: 0 0 17px;
-
       font-family: "Oswald", sans-serif;
       font-size: 13px;
       font-weight: 600;
-
       letter-spacing: .16em;
-
       color: var(--orange2);
     }
 
     .hero h1 {
       margin: 0 0 28px;
-
       font-size: clamp(52px, 6vw, 90px);
-
       line-height: 1.18;
-
       letter-spacing: .04em;
     }
 
     .hero h1 em {
       color: #ff7955;
-
       font-style: normal;
     }
 
     .hero-text {
       margin: 0;
-
       font-size: 18px;
-
       line-height: 2;
-
       color: #f0f3f4;
     }
 
     .button {
       display: inline-block;
-
       margin-top: 30px;
-
       padding: 15px 28px;
-
       background: var(--orange);
-
       color: #fff;
-
       font-weight: 700;
-
       transition: .2s;
     }
 
@@ -218,26 +188,16 @@
 
     .hero-note {
       position: absolute;
-
       right: 24px;
       bottom: 30px;
-
       writing-mode: vertical-rl;
-
       font-family: "Oswald", sans-serif;
       font-size: 11px;
-
       letter-spacing: .15em;
     }
 
-
-    /* =========================
-       INTRO
-    ========================= */
-
     .intro {
       padding: 125px 25px;
-
       text-align: center;
     }
 
@@ -246,9 +206,7 @@
     .works h2,
     .company h2 {
       margin: 0 0 27px;
-
       font-size: clamp(32px, 3.3vw, 49px);
-
       line-height: 1.45;
     }
 
@@ -256,94 +214,64 @@
       color: #b9c1c5;
     }
 
-
-    /* =========================
-       STRENGTH
-    ========================= */
-
     .strength {
       padding: 110px clamp(25px, 8vw, 150px);
-
       display: grid;
-
       grid-template-columns: 32% 1fr;
-
       gap: 60px;
-
       background: #151a1d;
     }
 
     .strength-list {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 35px;
     }
 
     .strength-list article {
       padding-left: 22px;
-
       border-left: 1px solid #59646a;
     }
 
     .strength-list b {
       font-family: "Oswald", sans-serif;
-
       color: var(--orange2);
     }
 
     .strength-list h3 {
       margin: 15px 0;
-
       font-size: 21px;
-
       line-height: 1.6;
     }
 
     .strength-list p {
       margin: 0;
-
       color: #cbd0d2;
-
       font-size: 14px;
     }
 
-
-    /* =========================
-       SERVICE
-    ========================= */
-
     .service {
       min-height: 620px;
-
       display: grid;
-
       grid-template-columns: 1fr 1fr;
     }
 
     .service-image img {
       width: 100%;
       height: 100%;
-
       min-height: 470px;
-
       object-fit: cover;
-
       display: block;
     }
 
     .service-copy {
       padding: 92px clamp(30px, 5vw, 82px);
-
       background: var(--panel2);
     }
 
     .service h2 {
       margin: 0 0 30px;
-
       font-size: clamp(30px, 2.5vw, 40px);
-
       line-height: 1.45;
     }
 
@@ -353,17 +281,13 @@
 
     .service-copy dl > div {
       display: flex;
-
       gap: 20px;
-
       padding: 17px 0;
-
       border-top: 1px solid #3b4449;
     }
 
     .service-copy dt {
       color: var(--orange2);
-
       font-family: "Oswald", sans-serif;
     }
 
@@ -373,20 +297,13 @@
 
     .service-copy strong {
       display: block;
-
       font-size: 17px;
     }
 
     .service-copy span {
       color: #b4bec3;
-
       font-size: 13px;
     }
-
-
-    /* =========================
-       WORKS
-    ========================= */
 
     .works {
       padding: 120px clamp(24px, 8vw, 150px);
@@ -398,19 +315,14 @@
 
     .gallery {
       display: grid;
-
       grid-template-columns: 1.3fr 1fr;
-
       gap: 18px;
     }
 
     .gallery figure {
       margin: 0;
-
       position: relative;
-
       overflow: hidden;
-
       background: #171b1e;
     }
 
@@ -425,11 +337,8 @@
     .gallery img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
-
       display: block;
-
       transition: transform .35s;
     }
 
@@ -437,16 +346,9 @@
       transform: scale(1.03);
     }
 
-
-    /* =========================
-       CONTACT
-    ========================= */
-
     .contact {
       padding: 95px 25px;
-
       text-align: center;
-
       background: #c74420;
     }
 
@@ -456,7 +358,6 @@
 
     .contact h2 {
       margin: 0 0 20px;
-
       font-size: clamp(30px, 3vw, 45px);
     }
 
@@ -466,32 +367,18 @@
 
     .button-light {
       display: inline-block;
-
       margin-top: 22px;
-
       padding: 14px 27px;
-
       background: #fff;
-
       color: #111;
-
       font-weight: 700;
     }
 
-
-    /* =========================
-       COMPANY
-    ========================= */
-
     .company {
       padding: 105px clamp(25px, 8vw, 150px);
-
       display: grid;
-
       grid-template-columns: 1fr 1.2fr;
-
       gap: 80px;
-
       background: var(--panel);
     }
 
@@ -501,27 +388,20 @@
 
     .company dl > div {
       display: grid;
-
       grid-template-columns: 140px 1fr;
-
       gap: 20px;
-
       padding: 18px 0;
-
       border-top: 1px solid var(--line);
     }
 
     .company dt {
       color: var(--gray);
-
       font-size: 14px;
-
       font-weight: 700;
     }
 
     .company dd {
       margin: 0;
-
       font-weight: 600;
     }
 
@@ -529,79 +409,51 @@
       color: var(--orange2);
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
       padding: 32px clamp(25px, 8vw, 150px);
-
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 30px;
-
       background: #080a0b;
-
       border-top: 1px solid #272d31;
     }
 
     .footer-brand {
       font-family: "Noto Serif JP", serif;
-
       font-size: 20px;
-
       font-weight: 700;
-
       letter-spacing: .14em;
     }
 
     footer small {
       color: #a6b0b4;
-
       font-size: 11px;
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 760px) {
 
       .site-header {
         padding: 16px 20px;
-
         display: block;
       }
 
       .brand {
         display: block;
-
         margin-bottom: 13px;
-
         font-size: 20px;
       }
 
       .site-nav {
         gap: 18px;
-
         overflow-x: auto;
-
         white-space: nowrap;
-
         font-size: 12px;
-
         padding-bottom: 4px;
       }
 
       .hero {
         height: 630px;
-
         min-height: 0;
       }
 
@@ -632,15 +484,12 @@
 
       .strength {
         padding: 75px 25px;
-
         grid-template-columns: 1fr;
-
         gap: 45px;
       }
 
       .strength-list {
         grid-template-columns: 1fr;
-
         gap: 22px;
       }
 
@@ -650,7 +499,6 @@
 
       .service-image img {
         min-height: 0;
-
         height: 390px;
       }
 
@@ -674,35 +522,28 @@
       .gallery .large,
       .gallery figure:not(.large) {
         height: 310px;
-
         margin-bottom: 12px;
-
         aspect-ratio: auto;
       }
 
       .company {
         padding: 75px 24px;
-
         grid-template-columns: 1fr;
-
         gap: 25px;
       }
 
       .company dl > div {
         grid-template-columns: 92px 1fr;
-
         gap: 14px;
       }
 
       footer {
         display: block;
-
         padding: 28px 24px;
       }
 
       footer small {
         display: block;
-
         margin-top: 12px;
       }
 
@@ -711,10 +552,7 @@
   </style>
 </head>
 
-
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -724,73 +562,43 @@
 
     <nav class="site-nav" aria-label="メインメニュー">
 
-      <a href="#strength">
-        強み
-      </a>
-
-      <a href="#service">
-        事業内容
-      </a>
-
-      <a href="#works">
-        加工事例
-      </a>
-
-      <a href="#company">
-        会社情報
-      </a>
+      <a href="#strength">強み</a>
+      <a href="#service">事業内容</a>
+      <a href="#works">加工事例</a>
+      <a href="#company">会社情報</a>
 
       <a
         class="instagram-link"
         href="https://www.instagram.com/taira.seimitukakou"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Instagram"
+        title="Instagram"
       >
-        Instagram
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.88 1.12a1.13 1.13 0 1 1 0 2.26 1.13 1.13 0 0 1 0-2.26zM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5zm0 1.5A4 4 0 1 0 16 12a4 4 0 0 0-4-4z"/>
+        </svg>
       </a>
 
     </nav>
 
   </header>
 
-
   <main id="top">
-
-
-    <!-- HERO -->
 
     <section class="hero">
 
-      <img
-        src="hero-welding.jpg"
-        alt="平精密加工の溶接作業"
-      >
-
+      <img src="hero-welding.jpg" alt="平精密加工の溶接作業">
       <div class="hero-shade"></div>
 
       <div class="hero-copy">
-
-        <p class="eyebrow">
-          TAIRA SEIMITSU KAKOU
-        </p>
-
-        <h1>
-          一品から、<br>
-          <em>精度に応える。</em>
-        </h1>
-
+        <p class="eyebrow">TAIRA SEIMITSU KAKOU</p>
+        <h1>一品から、<br><em>精度に応える。</em></h1>
         <p class="hero-text">
           ステンレス・鉄・アルミの溶接、研磨、精密加工。<br>
           職人の手で、図面の先にある仕上がりまでつくります。
         </p>
-
-        <a
-          class="button"
-          href="#company"
-        >
-          お問い合わせ・ご相談
-        </a>
-
+        <a class="button" href="#company">お問い合わせ・ご相談</a>
       </div>
 
       <div class="hero-note">
@@ -799,451 +607,188 @@
 
     </section>
 
-
-    <!-- INTRO -->
-
     <section class="intro">
-
-      <p class="section-kicker">
-        OUR CRAFT
-      </p>
-
-      <h2>
-        ミリ単位のご要望を、<br>
-        確かな手仕事で形にします。
-      </h2>
-
+      <p class="section-kicker">OUR CRAFT</p>
+      <h2>ミリ単位のご要望を、<br>確かな手仕事で形にします。</h2>
       <p>
         平 精密加工は、東京都八王子市美山町で金属加工を行っています。<br>
         一点ものの製作から、既存品の修理・仕上げまで。まずはご相談ください。
       </p>
-
     </section>
 
-
-    <!-- STRENGTH -->
-
-    <section
-      class="strength"
-      id="strength"
-    >
+    <section class="strength" id="strength">
 
       <div class="section-heading">
-
-        <p class="section-kicker">
-          STRENGTH
-        </p>
-
-        <h2>
-          平 精密加工が<br>
-          選ばれる理由
-        </h2>
-
+        <p class="section-kicker">STRENGTH</p>
+        <h2>平 精密加工が<br>選ばれる理由</h2>
       </div>
-
 
       <div class="strength-list">
 
         <article>
-
           <b>01</b>
-
-          <h3>
-            素材を見極める<br>
-            溶接技術
-          </h3>
-
+          <h3>素材を見極める<br>溶接技術</h3>
           <p>
             ステンレス、鉄、アルミ。
             素材の性質や用途に合わせ、
             丁寧な溶接加工を行います。
           </p>
-
         </article>
 
-
         <article>
-
           <b>02</b>
-
-          <h3>
-            仕上がりまで<br>
-            責任を持つ
-          </h3>
-
+          <h3>仕上がりまで<br>責任を持つ</h3>
           <p>
             溶接だけでなく、
             研磨や表面仕上げまで対応。
             見た目にも配慮して仕上げます。
           </p>
-
         </article>
 
-
         <article>
-
           <b>03</b>
-
-          <h3>
-            一点もの・小ロット<br>
-            にも対応
-          </h3>
-
+          <h3>一点もの・小ロット<br>にも対応</h3>
           <p>
             一点ものの製作や修理、
             少量の加工についても、
             内容を確認したうえで対応します。
           </p>
-
         </article>
 
       </div>
 
     </section>
 
-
-    <!-- SERVICE -->
-
-    <section
-      class="service"
-      id="service"
-    >
+    <section class="service" id="service">
 
       <div class="service-image">
-
-        <img
-          src="tig-welding.jpg"
-          alt="TIG溶接作業"
-        >
-
+        <img src="tig-welding.jpg" alt="TIG溶接作業">
       </div>
-
 
       <div class="service-copy">
 
-        <p class="section-kicker">
-          SERVICE
-        </p>
-
-        <h2>
-          金属加工のことなら、<br>
-          まとめてご相談ください。
-        </h2>
-
+        <p class="section-kicker">SERVICE</p>
+        <h2>金属加工のことなら、<br>まとめてご相談ください。</h2>
 
         <dl>
-
           <div>
-
             <dt>01</dt>
-
             <dd>
-
-              <strong>
-                金属溶接
-              </strong>
-
-              <span>
-                ステンレス・鉄・アルミの各種溶接
-              </span>
-
+              <strong>金属溶接</strong>
+              <span>ステンレス・鉄・アルミの各種溶接</span>
             </dd>
-
           </div>
 
-
           <div>
-
             <dt>02</dt>
-
             <dd>
-
-              <strong>
-                研磨・仕上げ
-              </strong>
-
-              <span>
-                溶接後の研磨・表面仕上げ
-              </span>
-
+              <strong>研磨・仕上げ</strong>
+              <span>溶接後の研磨・表面仕上げ</span>
             </dd>
-
           </div>
-
 
           <div>
-
             <dt>03</dt>
-
             <dd>
-
-              <strong>
-                精密加工・製作
-              </strong>
-
-              <span>
-                一点もの・部品製作にも対応
-              </span>
-
+              <strong>精密加工・製作</strong>
+              <span>一点もの・部品製作にも対応</span>
             </dd>
-
           </div>
-
         </dl>
 
       </div>
 
     </section>
 
-
-    <!-- WORKS -->
-
-    <section
-      class="works"
-      id="works"
-    >
+    <section class="works" id="works">
 
       <div class="works-header">
-
-        <p class="section-kicker">
-          CRAFT &amp; QUALITY
-        </p>
-
-        <h2>
-          加工の一つひとつに、<br>
-          精度と美しさを。
-        </h2>
-
+        <p class="section-kicker">CRAFT &amp; QUALITY</p>
+        <h2>加工の一つひとつに、<br>精度と美しさを。</h2>
       </div>
-
 
       <div class="gallery">
 
-
         <figure class="large">
-
-          <img
-            src="polishing.jpg"
-            alt="金属部品のバフ研磨作業"
-          >
-
+          <img src="polishing.jpg" alt="金属部品のバフ研磨作業">
         </figure>
-
 
         <figure>
-
-          <img
-            src="products.jpg"
-            alt="金属加工品"
-          >
-
+          <img src="products.jpg" alt="金属加工品">
         </figure>
-
 
         <figure>
-
-          <img
-            src="taira-tig-welding-web.jpg"
-            alt="平 精密加工 TIG溶接作業"
-          >
-
+          <img src="taira-tig-welding-web.jpg" alt="平 精密加工 TIG溶接作業">
         </figure>
-
 
       </div>
 
     </section>
-
-
-    <!-- CONTACT -->
 
     <section class="contact">
-
-      <p class="section-kicker">
-        CONTACT
-      </p>
-
-      <h2>
-        一点ものから、<br>
-        お気軽にご相談ください。
-      </h2>
-
-      <p>
-        図面・現物を確認し、加工方法をご提案します。
-      </p>
-
-      <a
-        class="button-light"
-        href="mailto:t.taira0923@gmail.com"
-      >
-        メールでお問い合わせ
-      </a>
-
+      <p class="section-kicker">CONTACT</p>
+      <h2>一点ものから、<br>お気軽にご相談ください。</h2>
+      <p>図面・現物を確認し、加工方法をご提案します。</p>
+      <a class="button-light" href="mailto:t.taira0923@gmail.com">メールでお問い合わせ</a>
     </section>
 
-
-    <!-- COMPANY -->
-
-    <section
-      class="company"
-      id="company"
-    >
+    <section class="company" id="company">
 
       <div>
-
-        <p class="section-kicker">
-          COMPANY
-        </p>
-
-        <h2>
-          会社情報
-        </h2>
-
+        <p class="section-kicker">COMPANY</p>
+        <h2>会社情報</h2>
       </div>
 
-
       <dl>
-
-
         <div>
-
-          <dt>
-            会社名
-          </dt>
-
-          <dd>
-            平 精密加工
-          </dd>
-
+          <dt>会社名</dt>
+          <dd>平 精密加工</dd>
         </div>
 
-
         <div>
-
-          <dt>
-            代表
-          </dt>
-
-          <dd>
-            平 隆之
-          </dd>
-
+          <dt>代表</dt>
+          <dd>平 隆之</dd>
         </div>
 
-
         <div>
-
-          <dt>
-            所在地
-          </dt>
-
-          <dd>
-            〒192-0152<br>
-            東京都八王子市美山町1876
-          </dd>
-
+          <dt>所在地</dt>
+          <dd>〒192-0152<br>東京都八王子市美山町1876</dd>
         </div>
 
-
         <div>
-
-          <dt>
-            TEL
-          </dt>
-
-          <dd>
-
-            <a href="tel:0426591535">
-              042-659-1535
-            </a>
-
-          </dd>
-
+          <dt>TEL</dt>
+          <dd><a href="tel:0426591535">042-659-1535</a></dd>
         </div>
 
-
         <div>
-
-          <dt>
-            FAX
-          </dt>
-
-          <dd>
-            042-659-2129
-          </dd>
-
+          <dt>FAX</dt>
+          <dd>042-659-2129</dd>
         </div>
 
-
         <div>
-
-          <dt>
-            MOBILE
-          </dt>
-
-          <dd>
-
-            <a href="tel:09064909375">
-              090-6490-9375
-            </a>
-
-          </dd>
-
+          <dt>MOBILE</dt>
+          <dd><a href="tel:09064909375">090-6490-9375</a></dd>
         </div>
 
-
         <div>
-
-          <dt>
-            MAIL
-          </dt>
-
-          <dd>
-
-            <a href="mailto:t.taira0923@gmail.com">
-              t.taira0923@gmail.com
-            </a>
-
-          </dd>
-
+          <dt>MAIL</dt>
+          <dd><a href="mailto:t.taira0923@gmail.com">t.taira0923@gmail.com</a></dd>
         </div>
 
-
         <div>
-
-          <dt>
-            事業内容
-          </dt>
-
-          <dd>
-            金属の溶接、研磨、精密加工
-          </dd>
-
+          <dt>事業内容</dt>
+          <dd>金属の溶接、研磨、精密加工</dd>
         </div>
-
-
       </dl>
 
     </section>
 
-
   </main>
 
-
-  <!-- FOOTER -->
-
   <footer>
-
-    <div class="footer-brand">
-      平 精密加工
-    </div>
-
-    <small>
-      © 平 精密加工
-    </small>
-
+    <div class="footer-brand">平 精密加工</div>
+    <small>© 平 精密加工</small>
   </footer>
-
 
 </body>
 
