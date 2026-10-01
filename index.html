@@ -194,7 +194,7 @@
 
     .works { padding: 120px clamp(24px, 8vw, 150px); }
     .works-header { margin-bottom: 45px; }
-    .gallery { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; }
+    .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .gallery figure { margin: 0; position: relative; overflow: hidden; background: #171b1e; }
     .gallery-column { display: grid; gap: 18px; align-content: start; }
     .gallery-column figure { aspect-ratio: 4 / 3; }
@@ -202,7 +202,7 @@
     .gallery img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
       transition: transform .35s;
     }
@@ -383,8 +383,8 @@
           <figure><img src="yaketori-finish.jpg" alt="焼け取りを施したステンレス部品"></figure>
         </div>
         <div class="gallery-column">
-          <figure><img src="products.jpg" alt="金属加工品"></figure>
-          <figure><img src="taira-tig-welding-web.jpg" alt="平 精密加工 TIG溶接作業"></figure>
+          <figure><img src="tig-welding-labeled.jpg" alt="TIG溶接作業"></figure>
+          <figure><img src="buff-polishing-labeled.jpg" alt="L字金具のバフ研磨作業"></figure>
         </div>
       </div>
     </section>
