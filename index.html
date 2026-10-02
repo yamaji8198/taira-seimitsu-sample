@@ -183,6 +183,8 @@
       object-fit: cover;
       display: block;
     }
+    .service-image { position: relative; overflow: hidden; }
+    .service-image .tig-closeup { position: absolute; top: -111.6%; left: 0; width: 100%; height: 323.3%; min-height: 0; object-fit: cover; }
     .service-copy { padding: 92px clamp(30px, 5vw, 82px); background: var(--panel2); }
     .service h2 { margin: 0 0 30px; font-size: clamp(30px, 2.5vw, 40px); line-height: 1.45; }
     .service-copy dl { margin: 36px 0 0; }
@@ -286,7 +288,9 @@
       .strength { padding: 75px 25px; grid-template-columns: 1fr; gap: 45px; }
       .strength-list { grid-template-columns: 1fr; gap: 22px; }
       .service { grid-template-columns: 1fr; }
+      .service-image { height: 390px; }
       .service-image img { min-height: 0; height: 390px; }
+      .service-image .tig-closeup { height: 323.3%; }
       .service-copy { padding: 70px 25px; }
       .service h2 { font-size: 28px; }
       .works { padding: 78px 20px; }
@@ -374,7 +378,7 @@
 
     <section class="service" id="service">
       <div class="service-image">
-        <img src="tig-welding.jpg" alt="TIG溶接作業">
+        <img class="tig-closeup" src="service-tig-closeup.png" alt="青いアークで金属を接合するTIG溶接作業">
       </div>
       <div class="service-copy">
         <p class="section-kicker">SERVICE</p>
