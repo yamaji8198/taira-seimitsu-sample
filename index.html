@@ -240,6 +240,23 @@
       font-weight: 700;
     }
 
+    .project-images {
+      padding: 60px clamp(24px, 8vw, 150px);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: start;
+      background: var(--black);
+    }
+    .project-images img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: 760px) {
+      .project-images { grid-template-columns: 1fr; padding: 36px 20px; gap: 18px; }
+    }
+
     .company {
       padding: 105px clamp(25px, 8vw, 150px);
       display: grid;
@@ -415,6 +432,11 @@
       <h2>一点ものから、<br>お気軽にご相談ください。</h2>
       <p>図面・現物を確認し、加工方法をご提案します。</p>
       <a class="button-light" href="mailto:t.taira0823@gmail.com">メールでお問い合わせ</a>
+    </section>
+
+    <section class="project-images" aria-label="図面確認と製品製作のイメージ">
+      <img src="drawing-review.jpg" alt="デスクでステンレス製カバーの溶接・バフ仕上げ図を確認するイメージ" loading="lazy" decoding="async" width="1491" height="1055">
+      <img src="cover-production.jpg" alt="鏡面仕上げのステンレス製カバーを作業台に並べた製作イメージ" loading="lazy" decoding="async" width="1448" height="1086">
     </section>
 
     <section class="company" id="company">
