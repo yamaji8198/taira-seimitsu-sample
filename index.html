@@ -240,25 +240,8 @@
       font-weight: 700;
     }
 
-    .project-images {
-      padding: 60px clamp(24px, 8vw, 150px);
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      align-items: start;
-      background: var(--black);
-    }
-    .project-images img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    @media (max-width: 760px) {
-      .project-images { grid-template-columns: 1fr; padding: 36px 20px; gap: 18px; }
-    }
-
     .personal-consultation {
-      padding: 60px clamp(24px, 8vw, 150px) 0;
+      padding: 60px clamp(24px, 8vw, 150px);
       text-align: center;
       background: var(--black);
     }
@@ -280,7 +263,7 @@
       font-weight: 700;
     }
     @media (max-width: 760px) {
-      .personal-consultation { padding: 40px 20px 0; }
+      .personal-consultation { padding: 40px 20px; }
       .personal-consultation p { font-size: 14px; }
     }
 
@@ -461,21 +444,11 @@
       <a class="button-light" href="mailto:t.taira0823@gmail.com">メールでお問い合わせ</a>
     </section>
 
-    <section class="project-images" aria-label="図面確認と製品製作のイメージ">
-      <img src="drawing-review.jpg" alt="デスクでステンレス製カバーの溶接・バフ仕上げ図を確認するイメージ" loading="lazy" decoding="async" width="1491" height="1055">
-      <img src="cover-production.jpg" alt="鏡面仕上げのステンレス製カバーを作業台に並べた製作イメージ" loading="lazy" decoding="async" width="1448" height="1086">
-    </section>
-
     <section class="personal-consultation" id="personal-consultation" aria-labelledby="personal-consultation-heading">
       <h2 id="personal-consultation-heading">「こんなもの作れる？」から、<br>お気軽に。</h2>
       <p>手描きのメモや写真からでもご相談いただけます。</p>
       <p>作りたい形や使い方を伺い、寸法・素材・加工方法を一緒に考えます。</p>
       <p class="personal-welcome">個人のお客様、一点もののご相談も歓迎です。</p>
-    </section>
-
-    <section class="project-images" aria-label="軽トラ用フレームのラフ図と製作事例">
-      <img src="truck-frame-sketch.jpg" alt="軽トラ用フレームの形状や取り付け位置を描いた手書きラフ図" loading="lazy" decoding="async" width="1448" height="1086">
-      <img src="truck-frame-finished.jpg" alt="軽トラックのキャビン背面に取り付けた黒い金属製フレーム" loading="lazy" decoding="async" width="1600" height="1200">
     </section>
 
     <section class="company" id="company">
