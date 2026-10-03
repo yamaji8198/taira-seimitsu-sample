@@ -257,6 +257,33 @@
       .project-images { grid-template-columns: 1fr; padding: 36px 20px; gap: 18px; }
     }
 
+    .personal-consultation {
+      padding: 60px clamp(24px, 8vw, 150px) 0;
+      text-align: center;
+      background: var(--black);
+    }
+    .personal-consultation h2 {
+      margin: 0 0 24px;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1.55;
+    }
+    .personal-consultation p {
+      max-width: 780px;
+      margin: 12px auto;
+      color: #cbd0d2;
+      font-size: 16px;
+      line-height: 2;
+      overflow-wrap: anywhere;
+    }
+    .personal-consultation .personal-welcome {
+      color: var(--orange2);
+      font-weight: 700;
+    }
+    @media (max-width: 760px) {
+      .personal-consultation { padding: 40px 20px 0; }
+      .personal-consultation p { font-size: 14px; }
+    }
+
     .company {
       padding: 105px clamp(25px, 8vw, 150px);
       display: grid;
@@ -437,6 +464,13 @@
     <section class="project-images" aria-label="図面確認と製品製作のイメージ">
       <img src="drawing-review.jpg" alt="デスクでステンレス製カバーの溶接・バフ仕上げ図を確認するイメージ" loading="lazy" decoding="async" width="1491" height="1055">
       <img src="cover-production.jpg" alt="鏡面仕上げのステンレス製カバーを作業台に並べた製作イメージ" loading="lazy" decoding="async" width="1448" height="1086">
+    </section>
+
+    <section class="personal-consultation" id="personal-consultation" aria-labelledby="personal-consultation-heading">
+      <h2 id="personal-consultation-heading">「こんなもの作れる？」から、<br>お気軽に。</h2>
+      <p>手描きのメモや写真からでもご相談いただけます。</p>
+      <p>作りたい形や使い方を伺い、寸法・素材・加工方法を一緒に考えます。</p>
+      <p class="personal-welcome">個人のお客様、一点もののご相談も歓迎です。</p>
     </section>
 
     <section class="project-images" aria-label="軽トラ用フレームのラフ図と製作事例">
