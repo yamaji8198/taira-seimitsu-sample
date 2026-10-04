@@ -368,6 +368,14 @@
       footer { display: block; padding: 28px 24px; }
       footer small { display: block; margin-top: 12px; }
     }
+    /* Keep Japanese phrases intact on narrow screens. */
+    .phrase { display: inline-block; white-space: nowrap; }
+    @media (max-width: 760px) {
+      .contact h2 { font-size: clamp(20px, 5.5vw, 30px); line-height: 1.5; }
+      .contact p { font-size: clamp(13px, 3.6vw, 16px); }
+      .personal-consultation h2 { font-size: clamp(18px, 5vw, 28px); }
+      .personal-consultation p { overflow-wrap: normal; line-break: strict; text-wrap: pretty; }
+    }
   </style>
 </head>
 
@@ -472,13 +480,13 @@
 
     <section class="contact">
       <p class="section-kicker">CONTACT</p>
-      <h2>一点ものから、<br>お気軽にご相談ください。</h2>
-      <p>図面・現物を確認し、加工方法をご提案します。</p>
+      <h2>一点ものから、<br><span class="phrase">お気軽にご相談ください。</span></h2>
+      <p><span class="phrase">図面・現物を確認し、</span><wbr><span class="phrase">加工方法をご提案します。</span></p>
       <a class="button-light" href="mailto:info@taira-seimitsukakou.com">メールでお問い合わせ</a>
     </section>
 
     <section class="personal-consultation" id="personal-consultation" aria-labelledby="personal-consultation-heading">
-      <h2 id="personal-consultation-heading">「こんなもの作れる？」から、<br>お気軽に。</h2>
+      <h2 id="personal-consultation-heading"><span class="phrase">「こんなもの作れる？」から、</span><br><span class="phrase">お気軽に。</span></h2>
       <p>手描きのメモや写真からでもご相談いただけます。</p>
       <p>作りたい形や使い方を伺い、寸法・素材・加工方法を一緒に考えます。</p>
       <p class="personal-welcome">個人のお客様、一点もののご相談も歓迎です。</p>
