@@ -386,6 +386,27 @@
       line-height: 1.8;
       overflow-wrap: anywhere;
     }
+    .inquiry-section { padding: 70px clamp(24px, 8vw, 150px); background: var(--panel2); }
+    .inquiry-inner { max-width: 720px; margin: 0 auto; }
+    .inquiry-section h2 { margin: 0 0 28px; font-size: clamp(28px, 3vw, 40px); }
+    .inquiry-form { display: grid; gap: 22px; }
+    .inquiry-field { display: grid; gap: 8px; min-width: 0; }
+    .inquiry-field label { font-size: 15px; font-weight: 600; }
+    .inquiry-field input, .inquiry-field select, .inquiry-field textarea {
+      box-sizing: border-box; width: 100%; min-width: 0; border: 1px solid #59646a;
+      border-radius: 0; padding: 12px 14px; background: #0b0d0f;
+      color: var(--white); font: inherit; font-size: 16px;
+    }
+    .inquiry-field textarea { resize: vertical; min-height: 150px; }
+    .inquiry-field :focus-visible { outline: 2px solid var(--orange2); outline-offset: 3px; }
+    .inquiry-policy { margin: 0 0 14px; font-size: 14px; line-height: 1.8; color: var(--white); overflow-wrap: anywhere; }
+    .inquiry-submit { display: block; width: 100%; padding: 15px 28px; border: 0; background: var(--orange); color: #fff; font: inherit; font-weight: 700; }
+    .inquiry-preview-note { color: var(--gray); font-size: 14px; }
+
+    .contact .button-light { margin: 12px 6px 0; }
+    .inquiry-submit { cursor: pointer; }
+    .inquiry-submit:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .inquiry-submit:hover { background: #ce4620; }
   </style>
 </head>
 
@@ -418,7 +439,7 @@
           東京都八王子市の溶接・金属加工・バフ研磨。<br>
           職人の手で、図面の先にある仕上がりまでつくります。
         </p>
-        <a class="button" href="#company">お問い合わせ・ご相談</a>
+        <a class="button" href="#inquiry">お問い合わせ・ご相談</a>
       </div>
       <div class="hero-note">WELDING / POLISHING / PRECISION FABRICATION</div>
     </section>
@@ -492,7 +513,48 @@
       <p class="section-kicker">CONTACT</p>
       <h2>一点ものから、<br><span class="phrase">お気軽にご相談ください。</span></h2>
       <p><span class="phrase">図面・現物を確認し、</span><wbr><span class="phrase">加工方法をご提案します。</span></p>
+      <a class="button-light" href="#inquiry">フォームでお問い合わせ</a>
       <a class="button-light" href="mailto:info@taira-seimitsukakou.com">メールでお問い合わせ</a>
+    </section>
+
+    <section class="inquiry-section" id="inquiry" aria-labelledby="inquiry-heading">
+      <div class="inquiry-inner">
+        <p class="section-kicker">INQUIRY</p>
+        <h2 id="inquiry-heading">お問い合わせ</h2>
+        <p class="inquiry-preview-note">送信時に迷惑送信防止の確認が求められる場合があります。入力内容はFormSubmitを通じて当社へ送信されます。</p>
+        <form class="inquiry-form" action="https://formsubmit.co/info@taira-seimitsukakou.com" method="POST" aria-describedby="inquiry-policy">
+          <input type="hidden" name="_subject" value="【平精密加工HP】お問い合わせ">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://taira-seimitsukakou.com/thanks.html">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="inquiry-field">
+            <label for="inquiry-category">お問い合わせ内容（必須）</label>
+            <select id="inquiry-category" name="お問い合わせ内容" required>
+              <option value="">選択してください</option>
+              <option value="加工の相談">加工の相談</option>
+              <option value="見積依頼">見積依頼</option>
+              <option value="既存のお客様">既存のお客様</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-name">お名前（必須）</label>
+            <input id="inquiry-name" name="name" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-email">メールアドレス（必須）</label>
+            <input type="email" id="inquiry-email" name="email" autocomplete="email" maxlength="254" required>
+          </div>
+          <div class="inquiry-field">
+            <label for="inquiry-message">ご相談・ご依頼の詳細（必須）</label>
+            <textarea id="inquiry-message" name="ご相談・ご依頼の詳細" maxlength="5000" required></textarea>
+          </div>
+          <div>
+            <p class="inquiry-policy" id="inquiry-policy">営業・広告・勧誘目的でのフォーム利用は禁止します。</p>
+            <button class="inquiry-submit" type="submit">送信する</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="personal-consultation" id="personal-consultation" aria-labelledby="personal-consultation-heading">
