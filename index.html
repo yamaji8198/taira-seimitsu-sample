@@ -407,12 +407,21 @@
     .inquiry-submit { cursor: pointer; }
     .inquiry-submit:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
     .inquiry-submit:hover { background: #ce4620; }
+
+    /* Supplied company logo: keep the mark and lettering in one image. */
+    .brand { display: block; flex-shrink: 0; line-height: 0; }
+    .brand-logo { display: block; width: clamp(210px, 27vw, 276px); max-width: 100%; height: auto; mix-blend-mode: screen; }
+    .footer-brand { max-width: 100%; line-height: 0; }
+    .footer-brand .brand-logo { width: 276px; }
+    @media (max-width: 760px) {
+      .brand-logo, .footer-brand .brand-logo { width: min(276px, 100%); }
+    }
   </style>
 </head>
 
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">平 精密加工</a>
+    <a class="brand" href="#top"><img class="brand-logo" src="taira-brand-logo.png" alt="平精密加工" width="1736" height="252" decoding="async"></a>
     <nav class="site-nav" aria-label="メインメニュー">
       <a href="#strength">強み</a>
       <a href="#service">事業内容</a>
@@ -580,7 +589,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand">平 精密加工</div>
+    <div class="footer-brand"><img class="brand-logo" src="taira-brand-logo.png" alt="平精密加工" width="1736" height="252" decoding="async"></div>
     <small>© 平 精密加工</small>
   </footer>
 </body>
