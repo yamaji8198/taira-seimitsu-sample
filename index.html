@@ -273,32 +273,7 @@
       font-weight: 700;
     }
 
-    .personal-consultation {
-      padding: 60px clamp(24px, 8vw, 150px);
-      text-align: center;
-      background: var(--black);
-    }
-    .personal-consultation h2 {
-      margin: 0 0 24px;
-      font-size: clamp(28px, 3vw, 44px);
-      line-height: 1.55;
-    }
-    .personal-consultation p {
-      max-width: 780px;
-      margin: 12px auto;
-      color: #cbd0d2;
-      font-size: 16px;
-      line-height: 2;
-      overflow-wrap: anywhere;
-    }
-    .personal-consultation .personal-welcome {
-      color: var(--orange2);
-      font-weight: 700;
-    }
-    @media (max-width: 760px) {
-      .personal-consultation { padding: 40px 20px; }
-      .personal-consultation p { font-size: 14px; }
-    }
+    .contact .personal-welcome { margin-top: 24px; font-weight: 700; }
 
     .company {
       padding: 105px clamp(25px, 8vw, 150px);
@@ -373,8 +348,8 @@
     @media (max-width: 760px) {
       .contact h2 { font-size: clamp(20px, 5.5vw, 30px); line-height: 1.5; }
       .contact p { font-size: clamp(13px, 3.6vw, 16px); }
-      .personal-consultation h2 { font-size: clamp(18px, 5vw, 28px); }
-      .personal-consultation p { overflow-wrap: normal; line-break: strict; text-wrap: pretty; }
+      .contact h2 { font-size: clamp(18px, 5vw, 28px); }
+      .contact p { overflow-wrap: normal; line-break: strict; text-wrap: pretty; }
     }
 
     .company dd { min-width: 0; overflow-wrap: anywhere; }
@@ -518,10 +493,12 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="personal-consultation" aria-labelledby="personal-consultation-heading">
       <p class="section-kicker">CONTACT</p>
-      <h2>一点ものから、<br><span class="phrase">お気軽にご相談ください。</span></h2>
-      <p><span class="phrase">図面・現物を確認し、</span><wbr><span class="phrase">加工方法をご提案します。</span></p>
+      <h2 id="personal-consultation-heading"><span class="phrase">「こんなもの作れる？」から、</span><br><span class="phrase">お気軽に。</span></h2>
+      <p>手描きのメモや写真からでもご相談いただけます。<br>
+        作りたい形や使い方を伺い、寸法・素材・加工方法を一緒に考えます。</p>
+      <p class="personal-welcome">個人のお客様、一点もののご相談も歓迎です。</p>
     </section>
 
     <section class="inquiry-section" id="inquiry" aria-labelledby="inquiry-heading">
@@ -564,12 +541,7 @@
       </div>
     </section>
 
-    <section class="personal-consultation" id="personal-consultation" aria-labelledby="personal-consultation-heading">
-      <h2 id="personal-consultation-heading"><span class="phrase">「こんなもの作れる？」から、</span><br><span class="phrase">お気軽に。</span></h2>
-      <p>手描きのメモや写真からでもご相談いただけます。</p>
-      <p>作りたい形や使い方を伺い、寸法・素材・加工方法を一緒に考えます。</p>
-      <p class="personal-welcome">個人のお客様、一点もののご相談も歓迎です。</p>
-    </section>
+    
 
     <section class="company" id="company">
       <div>
