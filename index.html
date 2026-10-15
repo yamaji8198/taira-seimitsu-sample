@@ -391,6 +391,70 @@
     @media (max-width: 760px) {
       .brand-logo, .footer-brand .brand-logo { width: min(276px, 100%); }
     }
+
+    /* Mobile layout: keep the headline legible and let content set the height. */
+    @media (max-width: 760px) {
+      .site-header { padding: 18px 20px 8px; }
+      .brand { margin-bottom: 12px; }
+      .brand-logo { width: min(276px, 100%); }
+      .site-nav {
+        justify-content: space-between;
+        gap: 8px;
+        overflow: visible;
+        font-size: 12px;
+        padding-bottom: 0;
+      }
+      .site-nav > a { display: inline-flex; align-items: center; min-height: 44px; }
+      .site-nav .instagram-link { width: 32px; height: 32px; min-height: 32px; flex-basis: 32px; }
+      .hero {
+        height: auto;
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        padding: 56px 22px;
+      }
+      .hero > img { position: absolute; inset: 0; object-position: 24% center; }
+      .hero-shade {
+        background: linear-gradient(90deg, rgba(5,8,10,.87), rgba(5,8,10,.42)),
+                    linear-gradient(0deg, rgba(5,8,10,.45), transparent 65%);
+      }
+      .hero-copy { position: relative; left: auto; right: auto; top: auto; transform: none; width: 100%; max-width: 540px; }
+      .hero .eyebrow { margin-bottom: 22px; font-size: 12px; letter-spacing: .13em; }
+      .hero h1 { margin-bottom: 24px; font-size: clamp(32px, 8.5vw, 54px); line-height: 1.4; letter-spacing: .01em; }
+      .hero h1 em { display: inline-block; white-space: nowrap; }
+      .hero-text { max-width: 34em; font-size: 15px; line-height: 1.9; line-break: strict; text-wrap: pretty; }
+      .hero-text br { display: none; }
+      .hero .button { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 340px; min-height: 54px; margin-top: 28px; padding: 14px 18px; font-size: 16px; }
+      .intro, .works { padding: 64px 22px; }
+      .intro h2, .section-heading h2, .works h2, .company h2 { font-size: clamp(23px, 5.9vw, 34px); line-height: 1.6; margin-bottom: 22px; }
+      .intro > p:last-child { text-align: left; font-size: 15px; line-height: 1.95; text-wrap: pretty; }
+      .intro > p:last-child br { display: none; }
+      .strength { padding: 64px 22px; gap: 24px; }
+      .strength-list { gap: 28px; }
+      .strength-list article { padding-left: 18px; }
+      .strength-list h3 { margin: 10px 0; font-size: 20px; }
+      .strength-list p { font-size: 15px; line-height: 1.9; }
+      .service-image, .service-image img { height: clamp(240px, 72vw, 390px); }
+      .service-copy { padding: 56px 22px; }
+      .service h2 { font-size: clamp(22px, 5.6vw, 32px); line-height: 1.6; }
+      .service-copy dl > div { gap: 14px; }
+      .service-copy dd { min-width: 0; }
+      .service-copy span { font-size: 14px; line-height: 1.9; }
+      .works-header { margin-bottom: 28px; }
+      .gallery figcaption { font-size: 18px; }
+      .contact { padding: 56px 22px; }
+      .contact h2 { font-size: clamp(18px, 4.9vw, 28px); line-height: 1.6; }
+      .contact p { font-size: 15px; line-height: 1.95; text-wrap: pretty; }
+      .contact p br { display: none; }
+      .inquiry-section { padding: 56px 22px; }
+      .inquiry-section h2 { font-size: 28px; margin-bottom: 22px; }
+      .inquiry-preview-note { line-height: 1.9; }
+      .company { padding: 56px 22px; }
+      .company dl > div { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+      .company dd { font-size: 14px; }
+      .company a[href^="tel:"] { display: inline-flex; align-items: center; min-height: 44px; margin-top: -8px; margin-bottom: -8px; font-size: 17px; }
+      footer { padding: 28px 22px; }
+    }
   </style>
 </head>
 
